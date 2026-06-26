@@ -1,0 +1,114 @@
+---
+layout: default
+---
+{% assign cv = site.data.cv.cv %}
+<div class="post cv">
+  <header class="cv-header">
+    <h1 class="cv-name">{{ cv.name }}</h1>
+    {% if cv.label %}<p class="cv-label">{{ cv.label }}</p>{% endif %}
+    {% if cv.location or cv.email %}
+      <p class="cv-contact">
+        {% if cv.location %}<span>{{ cv.location }}</span>{% endif %}
+        {% if cv.email %}<span><a href="mailto:{{ cv.email }}">{{ cv.email }}</a></span>{% endif %}
+      </p>
+    {% endif %}
+    {% if cv.summary %}<p class="cv-summary">{{ cv.summary }}</p>{% endif %}
+  </header>
+
+  {% for section in cv.sections %}
+    {% assign section_name = section[0] %}
+    {% assign items = section[1] %}
+    <section class="cv-section">
+      <div class="cv-section-label">{{ section_name }}</div>
+      <div class="cv-section-body">
+
+        {% if section_name == 'Skills' %}
+          <div class="cv-skills">
+            {% for skill in items %}
+              <div class="cv-skill-group">
+                {% if skill.name %}<span class="cv-skill-cat">{{ skill.name }}</span>{% endif %}
+                {% if skill.keywords %}
+                  <span class="cv-tags">
+                    {% assign kws = skill.keywords | split: ',' %}
+                    {% for kw in kws %}<span class="cv-tag">{{ kw | strip }}</span>{% endfor %}
+                  </span>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+
+        {% else %}
+          <ol class="cv-timeline">
+            {% for item in items %}
+              {%- comment -%} ---- date string (years only) ---- {%- endcomment -%}
+              {% assign date_str = '' %}
+              {% if item.start_date %}
+                {% assign sy = item.start_date | append: '' | split: '-' | first %}
+                {% if item.end_date %}
+                  {% if item.end_date == 'present' %}
+                    {% assign date_str = sy | append: ' – Present' %}
+                  {% else %}
+                    {% assign ey = item.end_date | append: '' | split: '-' | first %}
+                    {% if sy == ey %}{% assign date_str = sy %}{% else %}{% assign date_str = sy | append: ' – ' | append: ey %}{% endif %}
+                  {% endif %}
+                {% else %}
+                  {% assign date_str = sy %}
+                {% endif %}
+              {% elsif item.date %}
+                {% assign date_str = item.date | append: '' | split: '-' | first %}
+              {% elsif item.releaseDate %}
+                {% assign date_str = item.releaseDate | append: '' | split: '-' | first %}
+              {% endif %}
+
+              <li class="cv-item">
+                {% if date_str != '' %}<span class="cv-date">{{ date_str }}</span>{% endif %}
+
+                {% if item.authors %}
+                  {%- comment -%} ---- publication ---- {%- endcomment -%}
+                  <div class="cv-item-title">
+                    {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+                  </div>
+                  <div class="cv-item-sub cv-authors">
+                    {% for a in item.authors %}{% unless forloop.first %}, {% endunless %}{% assign an = a | strip %}{% if an contains 'Jisu Seo' %}<strong>{{ an }}</strong>{% else %}{{ an }}{% endif %}{% endfor %}
+                  </div>
+                  {% if item.publisher %}<div class="cv-item-meta"><em>{{ item.publisher }}</em></div>{% endif %}
+
+                {% else %}
+                  {%- comment -%} ---- generic entry (education / experience / award / project / language / activity) ---- {%- endcomment -%}
+                  {% assign headline = item.institution | default: item.company | default: item.title | default: item.name %}
+                  <div class="cv-item-title">
+                    {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ headline }}</a>{% else %}{{ headline }}{% endif %}
+                  </div>
+
+                  {% assign sub = '' %}
+                  {% if item.studyType %}
+                    {% assign sub = item.studyType %}
+                    {% if item.area %}{% assign sub = sub | append: ', ' | append: item.area %}{% endif %}
+                  {% elsif item.position %}
+                    {% assign sub = item.position %}
+                  {% elsif item.awarder %}
+                    {% assign sub = item.awarder %}
+                  {% elsif item.summary %}
+                    {% assign sub = item.summary %}
+                  {% endif %}
+                  {% if sub != '' %}<div class="cv-item-sub">{{ sub }}</div>{% endif %}
+
+                  {% if item.score %}<div class="cv-item-meta">{{ item.score }}</div>{% endif %}
+                  {% if item.location %}<div class="cv-item-meta">{{ item.location }}</div>{% endif %}
+                  {% if item.courses %}<div class="cv-item-meta">{{ item.courses }}</div>{% endif %}
+
+                  {% if item.highlights %}
+                    <ul class="cv-highlights">
+                      {% for h in item.highlights %}<li>{{ h }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        {% endif %}
+
+      </div>
+    </section>
+  {% endfor %}
+</div>

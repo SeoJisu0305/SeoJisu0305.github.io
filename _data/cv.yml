@@ -1,189 +1,184 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Jisu Seo
+  label: Combined MS/PhD Student in Chemistry, KAIST
+  email: jisuseo01@kaist.ac.kr
+  location: Daejeon, South Korea
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: SeoJisu0305
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: jisu-seo
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Korea Advanced Institute of Science and Technology (KAIST)
+        location: Daejeon, South Korea
+        url: https://www.kaist.ac.kr/en/
+        area: Chemistry
+        studyType: Combined MS/PhD
+        start_date: 2024-03
+        end_date: present
+        score: "GPA 3.98 / 4.3"
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Drug design using computational methods in Prof. Woo Youn Kim's Lab (ICL Lab)"
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Korea Advanced Institute of Science and Technology (KAIST)
+        location: Daejeon, South Korea
+        url: https://www.kaist.ac.kr/en/
+        area: Chemistry (Minor in School of Computing)
+        studyType: B.S.
+        start_date: 2019-03
+        end_date: 2024-02
+        score: "GPA 3.81 / 4.3, Cum Laude"
+
+      - institution: École Polytechnique Fédérale de Lausanne (EPFL)
+        location: Lausanne, Switzerland
+        url: https://www.epfl.ch/en/
+        studyType: Exchange Student
+        start_date: 2022-08
+        end_date: 2023-02
+        courses: "Introduction to Machine Learning; Methods in Drug Development; Pharmaceutical Biotechnology; Computer Language Processing; Modeling Lab"
+
+      - institution: University of California, Berkeley
+        location: Berkeley, USA
+        url: https://www.berkeley.edu/
+        studyType: Exchange Student
+        start_date: 2019-07
+        end_date: 2019-08
+        courses: "General Biology; Calculus 2"
+
+    Research:
+      - company: Prof. Woo Youn Kim's Lab (ICL Lab), KAIST
+        position: Graduate Researcher
+        location: Daejeon, South Korea
+        start_date: 2024-03
+        end_date: present
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Developing mechanistic ML models to predict oxidative DNA damage from sequencing data, encoding the underlying biochemical kinetics directly into the model structure rather than treating it as black-box classification"
+          - "Co-authored BInD, a diffusion model for multi-objective structure-based drug design (Advanced Science, 2025)"
 
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Prof. Woo Youn Kim's Lab, KAIST
+        position: Undergraduate Researcher
+        location: Daejeon, South Korea
+        start_date: 2022-03
+        end_date: 2023-12
         highlights:
-          - Relativity
-          - Description 2.
+          - "Created an algorithm that suggests synthetic pathways for molecules structurally similar to a target molecule"
+          - "Designed a graph neural network (GNN) model to predict molecular hepatotoxicity"
+          - "Studied the generalization ability of equivariant diffusion models (EDM) for generating 3D molecular structures"
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Prof. Mihee Lim's Lab, KAIST
+        position: Undergraduate Researcher
+        location: Daejeon, South Korea
+        start_date: 2021-07
+        end_date: 2021-08
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Synthesized flavonoids capable of crossing the blood–brain barrier (BBB) as potential dementia-preventing agents"
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Prof. Heeseung Lee's Lab, KAIST
+        position: Undergraduate Researcher
+        location: Daejeon, South Korea
+        start_date: 2020-07
+        end_date: 2020-08
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - "Synthesized beta-peptides and studied their folding characteristics"
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "BInD: Bond and Interaction-Generating Diffusion Model for Multi-Objective Structure-Based Drug Design"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Joongwon Lee
+          - Wonho Zhung
+          - Jisu Seo
+          - Woo Youn Kim
+        publisher: Advanced Science
+        releaseDate: 2025
+        url: https://doi.org/10.1002/advs.202502702
+        summary: "Advanced Science (2025), e02702"
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "MoAgent: A Hypothesis-Driven Multi-Agent Framework for Drug Mechanism of Action Discovery"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Jun Hyeong Kim
+          - Seokhyun Moon
+          - Seonghwan Kim
+          - Junhyeok Jeon
+          - Taein Kim
+          - Jisu Seo
+          - Songmi Kim
+          - Woo Youn Kim
+        publisher: NeurIPS 2025 Workshop on Multi-modal Foundation Models and LLMs for Life Sciences
+        releaseDate: 2025
+        url: https://openreview.net/forum?id=1fkPh6XTVe
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming
+        keywords: "Python, PyTorch"
+      - name: Machine Learning
+        keywords: "Deep Learning, Graph Neural Networks, Generative Models (Diffusion / Flow / VAE)"
+      - name: Chemistry & Drug Discovery
+        keywords: "Computational Chemistry, Structure-Based Drug Design, Cheminformatics (RDKit)"
+
+    Honors & Awards:
+      - title: KAIST Scholarship for the Student Exchange Program
+        date: 2022
+        awarder: KAIST
+      - title: Honor (Dean's List)
+        date: 2020
+        awarder: KAIST
+      - title: National Science & Technology Scholarship
+        date: 2019
+        awarder: Korea Student Aid Foundation
+      - title: KAIST Presidential Fellowship (KPF)
+        date: 2019
+        awarder: KAIST
+
+    Teaching:
+      - company: KAIST
+        position: Teaching Assistant
+        location: Daejeon, South Korea
+        start_date: 2024-03
+        end_date: 2025-12
+        highlights:
+          - "Computational Chemistry (Mar – Jul 2024)"
+          - "AI Chemistry (Sep – Dec 2025)"
+
+    Selected Course Projects:
+      - name: Flow-based Molecule Generation with Pocket-Informed Priors
+        summary: "Theory and Application of AI Bio, KAIST"
+        start_date: 2025-03
+        end_date: 2025-06
+      - name: Protein–Ligand Binding Affinity Estimation
+        summary: "AI Chemistry, KAIST — achieved the best performance in the course; MPNN model using molecular structure and reaction data"
+        start_date: 2024-09
+        end_date: 2024-12
+      - name: Unsupervised Molecule Clustering with VaDE
+        summary: "Statistical Generative Model, KAIST — Variational Deep Embedding for unsupervised molecular clustering"
+        start_date: 2024-09
+        end_date: 2024-12
+      - name: "Amy Compiler Extension: Multiple Syntax Styles"
+        summary: "Computer Language Processing, EPFL — modified a compiler to support braces-style and end-marker-style syntax"
+        start_date: 2022-09
+        end_date: 2022-12
 
     Languages:
-      - name: German
-        summary: "Native speaker"
-
+      - name: Korean
+        summary: Native speaker
       - name: English
-        summary: "Fluent"
+        summary: "TOEIC 870"
+      - name: French
+        summary: "DELF A2"
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    Activities:
+      - name: Department of Chemistry Student Council
+        start_date: 2020-07
+        end_date: 2022-07
+      - name: Street Dance Crew
+        start_date: 2019-03
+        end_date: 2022-07
+      - name: KAIST Buddy
+        start_date: 2021-03
+        end_date: 2021-06
+      - name: Freshman Program Designer
+        start_date: 2020-01
+        end_date: 2020-12

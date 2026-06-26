@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<div class="post about">
+  <header class="about-header">
+    {% if page.profile and page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      {% if page.profile.image_circular %}
+        {% assign profile_image_class = 'img-fluid rounded-circle' %}
+      {% else %}
+        {% assign profile_image_class = 'img-fluid rounded' %}
+      {% endif %}
+      <div class="about-avatar">
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class
+          sizes="220px" alt=page.profile.image cache_bust=true
+        %}
+      </div>
+    {% endif %}
+
+    <div class="about-intro">
+      {% if page.profile.eyebrow %}
+        <p class="about-eyebrow">{{ page.profile.eyebrow }}</p>
+      {% endif %}
+
+      <h1 class="about-name">
+        {% if site.title == 'blank' %}
+          {{ site.first_name }}{% if site.middle_name and site.middle_name != '' %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+
+      <div class="about-meta">
+        {% if page.profile.position %}<p class="about-role">{{ page.profile.position }}</p>{% endif %}
+        {% if page.profile.affiliation %}<p class="about-affiliation">{{ page.profile.affiliation }}</p>{% endif %}
+        {% if page.profile.lab %}<p class="about-lab">{{ page.profile.lab }}</p>{% endif %}
+      </div>
+
+      <div class="about-bio">{{ content }}</div>
+
+      {% if page.social %}
+        {% assign s = site.data.socials %}
+        <nav class="about-socials" aria-label="Profile links">
+          {% if s.email %}
+            <a class="social-link" href="mailto:{{ s.email }}"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+          {% endif %}
+          {% if s.scholar_userid %}
+            <a class="social-link" href="https://scholar.google.com/citations?user={{ s.scholar_userid }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i><span>Scholar</span></a>
+          {% endif %}
+          {% if s.orcid_id %}
+            <a class="social-link" href="https://orcid.org/{{ s.orcid_id }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid"></i><span>ORCID</span></a>
+          {% endif %}
+          {% if s.github_username %}
+            <a class="social-link" href="https://github.com/{{ s.github_username }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+          {% endif %}
+          {% if s.linkedin_username %}
+            <a class="social-link" href="https://www.linkedin.com/in/{{ s.linkedin_username }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          {% endif %}
+          {% if s.cv_pdf %}
+            <a class="social-link" href="{{ s.cv_pdf | relative_url }}"><i class="ai ai-cv"></i><span>CV</span></a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.selected_papers %}
+    <section class="about-publications">
+      <h2 class="about-section-title">Selected publications</h2>
+      {% include selected_papers.liquid %}
+    </section>
+  {% endif %}
+</div>
