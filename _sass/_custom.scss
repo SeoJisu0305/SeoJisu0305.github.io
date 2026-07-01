@@ -173,6 +173,11 @@ h3 {
   color: var(--global-text-color-light);
 }
 
+.about-affiliation a,
+.about-lab a {
+  color: inherit;
+}
+
 .about-bio {
   margin-bottom: 1.25rem;
   max-width: 54ch;

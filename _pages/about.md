@@ -9,8 +9,8 @@ profile:
   image_circular: true # circular avatar frame, as in the design
   eyebrow: Chemistry × Deep Learning · KAIST
   position: Integrated MS–PhD student
-  affiliation: Department of Chemistry, KAIST
-  lab: ICL Lab · Prof. Woo Youn Kim
+  affiliation: '<a href="https://chem.kaist.ac.kr/eng" target="_blank" rel="noopener noreferrer">Department of Chemistry, KAIST</a>'
+  lab: '<a href="https://wooyoun.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">ICL Lab</a> · <a href="https://scholar.google.com/citations?user=elJ5KrcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Woo Youn Kim</a>'
 
 selected_papers: true # shows papers marked `selected={true}` from _bibliography/papers.bib
 social: true # renders the labeled social links in the header
